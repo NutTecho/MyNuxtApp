@@ -34,7 +34,7 @@
             <Cardassy 
             headtitle="testprops" 
             datacontent="xxxxx"
-            :getprice="50"
+            getprice="50"
             @add-to-cart = "addstock"
              />
             <!-- <Tabbasic ></Tabbasic> -->

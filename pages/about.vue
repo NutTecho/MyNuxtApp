@@ -61,6 +61,9 @@ export default {
     name:'AboutPage',
     // components: { hnav },
     layout : "corelayout" ,
+    mounted(){
+        console.log('state',this.$nuxt.$store.state);
+    },
     data(){
         return{
             title : 'hello Thailand',
@@ -155,7 +158,18 @@ export default {
                 this.model = cut[0];
                 this.mcode = cut[1];
             }
+        },
+        drawer:{
+            get()
+            {
+                return this.$nuxt.$store.state.drawer
+            },set(val)
+            {
+                // get new value from store function set_drawer
+                this.$store.commit('set_drawer',val)
+            }
         }
+
     },
    
     

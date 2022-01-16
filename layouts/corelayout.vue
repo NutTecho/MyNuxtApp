@@ -4,20 +4,33 @@
             toggleable="lg" 
             type="light" 
             variant="light" 
+         
         >
-        <b-navbar-brand href="/">MyWebApp</b-navbar-brand>
+      
+        <b-navbar-brand href="/">
+         <b-icon-arrow-bar-up></b-icon-arrow-bar-up>
+            MyWebApp
+        </b-navbar-brand>
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
                 <b-collapse id="nav-collapse" is-nav>
                     <b-navbar-nav v-for="list in linklist" :key="list.id">
+                        <b-icon-basket animation="fade" font-scale="4"></b-icon-basket>
                         <b-nav-item :to="list.to">{{list.title}}</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
         <nuxt/>
+
+     
     </div>
     
 </template>
 <script>
+// import { Vue } from 'vue'
+// import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+
+// Vue.use(BootstrapVue)
+// Vue.use(IconsPlugin)
 export default ({
    name: "NuxtCorelayout",
    data(){
